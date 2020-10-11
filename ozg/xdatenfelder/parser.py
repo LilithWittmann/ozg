@@ -265,18 +265,11 @@ class FIMField(FIMElement, FIMHeaderMixin):
             fim_code_list = FimCodeList(self._reference_value_uri)
             any_of = []
             for choice in fim_code_list.dataset:
-                any_of.append(
-                {
-                    "type": "string",
-                    "enum": [
-                        choice[0]
-                    ],
-                    "title": choice[1]
-                })
+                any_of.append(choice[1])
             return {
                 "title": self.input_name if self.input_name else self.name,
                 "description": self._input_hint if self._input_hint else self.description,
-                "anyOf": any_of,
+                "enum": any_of,
                 "type": "string"
             }
         elif self.field_type == "label":
