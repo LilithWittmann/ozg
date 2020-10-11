@@ -9,13 +9,14 @@ pip install ozg
 ```
 
 ```python
-from ozg.fim import FIMParser
+from ozg.xdatenfelder.parser import FIMParser
 import json
 # parses your XDatenfelder file/url/string
 parser = FIMParser("https://fimportal.de/detail?tx_fimportalcatalog_fimsearch%5Baction%5D=download&tx_fimportalcatalog_fimsearch%5Bcontroller%5D=CatalogEntry&tx_fimportalcatalog_fimsearch%5BdocumentIndex%5D=1&tx_fimportalcatalog_fimsearch%5Bid%5D=DS00000123&cHash=0760c920aa906ab17ecef77281781f09")
 
 # dumps your spec as a json-schema-form
-json.dumps(parser.to_json)
+print(json.dumps(parser.to_json))
+
 
 ```
 

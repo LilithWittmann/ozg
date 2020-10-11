@@ -1,4 +1,5 @@
-from ozg.fim.parser import FIMParser
+from ozg.xdatenfelder.parser import FIMParser
+from ozg.xdatenfelder.fim_code_lists import FimCodeList
 
 class TestFimParserInit:
 
@@ -52,3 +53,10 @@ class TestFimParserInit:
     def test_from_url(self):
         parser = FIMParser("https://fimportal.de/detail?tx_fimportalcatalog_fimsearch%5Baction%5D=download&tx_fimportalcatalog_fimsearch%5Bcontroller%5D=CatalogEntry&tx_fimportalcatalog_fimsearch%5BdocumentIndex%5D=1&tx_fimportalcatalog_fimsearch%5Bid%5D=DS00000123&cHash=0760c920aa906ab17ecef77281781f09")
         print(parser.to_json)
+
+
+class TestFimCodeLists:
+    
+    def test_init(self):
+        FimCodeList("urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat")
+        FimCodeList("urn:de:xoev:codeliste:erreichbarkeit")

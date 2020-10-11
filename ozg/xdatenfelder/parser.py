@@ -3,6 +3,8 @@ import untangle
 from typing import List, Any, Union
 from abc import ABC
 
+from .fim_code_lists import FimCodeList
+
 
 class FIMParserError(Exception):
     pass
@@ -162,12 +164,13 @@ class FIMStructure(FIMElement):
         return self.contains.id
 
     def to_json(self):
-        if self.max_items < 2:
+        if self.max_items == 1 and self.min_items == 1:
             return self._contains.to_json()
         else:
             return {
             "minItems": self.min_items,
             "maxItems": self.max_items,
+            "title": f"Liste von {self.contains.name}" if self.max_items > 1 else self.contains.name,
             "type": "array",
             "items": self.contains.to_json()
             }
@@ -180,20 +183,36 @@ class FIMField(FIMElement, FIMHeaderMixin):
         self._field_type = self._definition.xdf_feldart.code.cdata
         self._data_type = self._definition.xdf_datentyp.code.cdata
         self._validation_details = self._definition.xdf_praezisierung.cdata
-        self._default_content = self._definition.xdf_inhalt.cdata
+        self._default_value = self._definition.xdf_inhalt.cdata
+        self._input_hint = self._definition.xdf_hilfetextEingabe.cdata
+        self._output_hint = self._definition.xdf_hilfetextAusgabe.cdata
 
         self._reference_value_uri = None
         if self._field_type == "select":
             if self._version == FIMParser.FIM_VERSION_1:
-                if self._definition.get_elements("xdf_codeliste") == 1:
+                if len(self._definition.get_elements("xdf_codeliste")) == 1:
                     self._reference_value_uri = self._definition.xdf_codeliste.xdf_kennung.cdata
             elif self._version == FIMParser.FIM_VERSION_2:
-                if self._definition.get_elements("xdf_codelisteReferenz") == 1:
+                if len(self._definition.get_elements("xdf_codelisteReferenz")) == 1:
                     self._reference_value_uri = self._definition.xdf_codelisteReferenz.xdf_genericodeIdentification.xdf_canonicalIdentification.cdata
+                    print(self._reference_value_uri)
+    ELEMENT_TYPE = "field"
 
     @property
     def field_type(self):
         return self._field_type
+
+    @property
+    def input_hint(self):
+        return self._input_hint
+
+    @property
+    def output_hint(self):
+        return self._output_hint
+
+    @property
+    def default_value(self):
+        return self._default_value
 
     @property
     def data_type(self):
@@ -224,13 +243,37 @@ class FIMField(FIMElement, FIMHeaderMixin):
         }
         if self.field_type == "input":
             a = mapping[self.data_type]
-            a["title"] = self.name
-            a["description"] = self.description
+            a["title"] = self.input_name if self.input_name else self.name
+            a["description"] = self._input_hint if self._input_hint else self.description
             return a
+        elif self.field_type == "select":
+            fim_code_list = FimCodeList(self._reference_value_uri)
+            any_of = []
+            for choice in fim_code_list.dataset:
+                any_of.append(
+                {
+                    "type": "string",
+                    "enum": [
+                        choice[0]
+                    ],
+                    "title": choice[1]
+                })
+            return {
+                "title": self.input_name if self.input_name else self.name,
+                "description": self._input_hint if self._input_hint else self.description,
+                "anyOf": any_of,
+                "type": "string"
+            }
+        elif self.field_type == "label":
+            return {
+                "title": self.input_name if self.input_name else self.name,
+                "description": self.default_value,
+                "type": "label"
+            }
         else:
             return {
-                "title": self.name,
-                "description": self.description,
+                "title": self.input_name if self.input_name else self.name,
+                "description": self._input_hint if self._input_hint else self.description,
                 "type": "string"
             }
 
@@ -249,6 +292,8 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
     def fields(self):
         return self._fields
 
+    ELEMENT_TYPE = "field_group"
+
 
 
     def to_json(self):
@@ -259,8 +304,11 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
             "properties": {}
 
             }
+
+        last_element = None
         for i in self.fields:
-            base["properties"][i.contains.name] = i.to_json()
+            base["properties"][i.contains.id] = i.to_json()
+
 
         return base
 
