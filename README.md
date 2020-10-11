@@ -1,6 +1,6 @@
-# Onlinezugangsgesetz Tools
+# 🥔 Onlinezugangsgesetz Tools 🥔 
 ---
-Currently this package only includes a parser and converter to jsonschema-forms for the [https://www.xrepository.de/api/xrepository/urn:xoev-de:fim:standard:xdatenfelder_2.0:dokument:XDatenfelder_Spezifikation](XDatenfelder) format.
+Currently this package only includes a parser and converter to jsonschema-forms for the [xDatenfelder](https://www.xrepository.de/api/xrepository/urn:xoev-de:fim:standard:xdatenfelder_2.0:dokument:XDatenfelder_Spezifikation) format.
 
 ## Installation
  
@@ -24,6 +24,6 @@ json.dumps(parser.to_json)
   - [X] v1
   - [X] v2
 - [ ] Implementation of select fields with external lists
-- [X] (basic) XDatenfelder transformation to [https://react-jsonschema-form.readthedocs.io/](jsonschema-form)
+- [X] (basic) XDatenfelder transformation to [jsonschema-form](https://react-jsonschema-form.readthedocs.io/)
 - [ ] conversions from json to xöv xml documents
 - [ ] xzufi standard
