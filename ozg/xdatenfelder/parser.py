@@ -163,18 +163,33 @@ class FIMStructure(FIMElement):
     def id(self):
         return self.contains.id
 
-    def to_json(self):
+    def to_json(self, level = None):
         if self.max_items == 1 and self.min_items == 1:
-            return self._contains.to_json()
+            element =  self._contains.to_json()
         else:
-            return {
+            element =  {
             "minItems": self.min_items,
             "maxItems": self.max_items,
             "title": f"Liste von {self.contains.name}" if self.max_items > 1 else self.contains.name,
             "type": "array",
             "items": self.contains.to_json()
+
             }
 
+        if level == 0:
+            element = {
+                "title": self.contains.name,
+                "description": self.contains.description,
+                "type": "object",
+                "properties": {
+                    self.id: element
+                }
+
+            }
+
+
+
+        return element
 
 class FIMField(FIMElement, FIMHeaderMixin):
     def _parse(self):
@@ -238,8 +253,8 @@ class FIMField(FIMElement, FIMHeaderMixin):
         "num": {"type": "number"},
         "num_int": {"type": "integer"},
         "num_currency": {"type": "number"},
-        "file": {"type": "string", "format": "data-url"},
-        "obj": {"type": "string", "format": "data-url"},
+        "file": {"type": "string", "x-display": "file"},
+        "obj": {"type": "string", "display": "data-url"},
         }
         if self.field_type == "input":
             a = mapping[self.data_type]
@@ -268,7 +283,8 @@ class FIMField(FIMElement, FIMHeaderMixin):
             return {
                 "title": self.input_name if self.input_name else self.name,
                 "description": self.default_value,
-                "type": "label"
+                "type": "string",
+                "display": "label"
             }
         else:
             return {
@@ -393,10 +409,10 @@ class FIMParser(FIMHeaderMixin):
             "title": self.input_name,
             "description": self.description,
             "type": "object",
-            "properties": {}
-
+            "properties": {},
+            "x-display": "expansion-panels"
             }
         for i in self.form:
-            base["properties"][i.id] = i.to_json()
+            base["properties"][i.id] = i.to_json(level = 0)
 
         return base
