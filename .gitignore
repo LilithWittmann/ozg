@@ -1,6 +1,6 @@
 ###### Project-specific customizations
 
-
+.idea/
 ###### Template for similar projects
 
 # Created by https://www.gitignore.io/api/django,python,intellij,sublimetext
