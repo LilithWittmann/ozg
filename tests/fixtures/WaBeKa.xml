@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xdf:xdatenfelder.stammdatenschema.0102001 xmlns:xdf="urn:xoev-de:fim:standard:xdatenfelder_1">
+<xdf:header>
+<xdf:datum>2019-04-23</xdf:datum>
+<xdf:fimId>S00000036</xdf:fimId>
+<xdf:version>0.0</xdf:version>
+</xdf:header>
+<xdf:stammdatenschema>
+<xdf:id>S00000036</xdf:id>
+<xdf:name>Waffenbesitzkarte (WBK grün)</xdf:name>
+<xdf:bezeichnungEingabe>Waffenbesitzkarte nach § 10 Absatz 1 WaffG</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Urkunde zur Bestätigung der Erlaubnis zum Erwerb und Besitz von Waffen und Munition nach § 10 Absatz 1 WaffG</xdf:beschreibung>
+<xdf:definition>Urkunde zur Bestätigung der Erlaubnis zum Erwerb und Besitz von Waffen und Munition nach § 10 Absatz 1 WaffG</xdf:definition>
+<xdf:bezug>Entspricht der Allgemeine Verwaltungsvorschrift zu Vordrucken des Waffengesetzes (WaffVordruckVwV) vom 30. Mai 2012 Anlage 1</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>inVorbereitung</code>
+</xdf:status>
+<xdf:ableitungsmodifikationenStruktur listURI="urn:xoev-de:fim:codeliste:xdatenfelder.ableitungsmodifikationenStruktur" listVersionID="1.0">
+<code>3</code>
+</xdf:ableitungsmodifikationenStruktur>
+<xdf:ableitungsmodifikationenRepraesentation listURI="urn:xoev-de:fim:codeliste:xdatenfelder.ableitungsmodifikationenRepraesentation" listVersionID="1.0">
+<code>1</code>
+</xdf:ableitungsmodifikationenRepraesentation>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000141</xdf:id>
+<xdf:name>Urkundenbezeichnung Waffenbesitzkarte (WBK Grün)</xdf:name>
+<xdf:bezeichnungEingabe>Urkundenbezeichnung</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>-</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>inVorbereitung</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000057</xdf:id>
+<xdf:name>Urkundennummer</xdf:name>
+<xdf:bezeichnungEingabe>Urkundennummer</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Bei der Urkundennummer handelt es sich um eine Identifikationsnummer einer Urkunde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Urkundennummer an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Urkundennummer.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>num</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000032</xdf:id>
+<xdf:name>Ausstellende Behörde</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Behörde, die ein offizielles Dokument ausstellt.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000008</xdf:id>
+<xdf:name>Bezeichnung Juristische Person</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Diese Gruppe fasst alle Angaben zur Bezeichnung (Vollständiger Name und Kurzform) einer juristischen Person zusammen.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000034</xdf:id>
+<xdf:name>Organisationsname</xdf:name>
+<xdf:bezeichnungEingabe>Organisationsname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Offizieller Name einer Organisation. Entspricht bei registrierten Organisationen dem im Register eingetragenen Namen.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.NameOrganisation.name&#13;
+XGewerbeanzeige v 1.3 EingetragenerName</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Namen der Organisation an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Namen der Organisation.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>{"minLength":"1","maxLength":"250"}</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000033</xdf:id>
+<xdf:name>Organisation Kurzbezeichnung</xdf:name>
+<xdf:bezeichnungEingabe>Kurzbezeichnung der Organisation</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Eine kürzere beziehungsweise abgekürzte Bezeichnung für eine Organisation.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameOrganisation.kurzbezeichnung</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Kurzbezeichnung der Organisation an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Kurzbezeichnung der Organisation.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000067</xdf:id>
+<xdf:name>Berechtigte natürliche Person</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung/>
+<xdf:definition>Person die zu einer Handlung oder dem Besitz eines Gegenstandes berechtigt ist.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000086</xdf:id>
+<xdf:name>Name Natürliche Person (ohne Künstlername und Ordensname)</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der Name einer Person ist eine Benennung dieser Person, die dazu dient, diese Person von anderen Personen zu unterscheiden. Diese Gruppe vernachlässigt den Künstler- und Ordensnamen einer natürlichen Person.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000073</xdf:id>
+<xdf:name>Anrede</xdf:name>
+<xdf:bezeichnungEingabe>Anrede</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Anrede ist der Namenszusatz (auch eine Anrede ohne Namen nur mit Titel ist eine Anrede!) bei der Anrede
+(mündlich oder schriftlich) oder bei einem Anruf (fernmündlich) an eine Person oder Personengruppe.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.anrede
+Codeliste: "Herr", "Frau"</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Anrede (Herr oder Frau) ohne Berücksichtigung von Titeln an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Anrede ohne Berücksichtigung von Titeln.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>Anrede</xdf:praezisierung>
+<xdf:inhalt/>
+<xdf:codeliste>
+<xdf:id>C00000040</xdf:id>
+<xdf:name>Anrede</xdf:name>
+<xdf:bezeichnungEingabe>Anrede</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition/>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>inVorbereitung</code>
+</xdf:status>
+<xdf:kennung>Anrede</xdf:kennung>
+<xdf:version/>
+<xdf:langname/>
+</xdf:codeliste>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000083</xdf:id>
+<xdf:name>Weiterer Name</xdf:name>
+<xdf:bezeichnungEingabe>Weiterer Name</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Weitere Namen einer natürlichen Person, die sich keinem der anderen Felder zuordnen lassen (z.B.: Vatersname).</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.weitererName</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie weitere Namen einer Person an, die sich keinem der anderen Felder zuordnen lassen (z.B.: Vatersname).</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält weitere Namen einer Person.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000037</xdf:id>
+<xdf:name>Titel natürliche Person</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung/>
+<xdf:definition>Diese Feldgruppe enthält Angaben zu vorangestellten Titeln einer natürlichen Person.</xdf:definition>
+<xdf:bezug>XÖV.NameNatuerlichePerson</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000043</xdf:id>
+<xdf:name>Titel</xdf:name>
+<xdf:bezeichnungEingabe>Titel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein vorangestellter Titel wird häufig im Zusammenhang mit Namen verwendet, ist aber kein originärer Bestandteil des Namens. Im Unterschied dazu gehören Adelstitel zum Familiennamen und sind daher in diesem Verständnis kein vorangestellter Titel. Zu den vorangestellten Titeln zählen beispielsweise akademische Grade wie Doktortitel.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.titel</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie Titel ein, die vor den Namen gestellt werden. Zu den vorangestellten Titeln zählen beispielsweise akademische Grade wie Doktortitel. Nachgestellte akademische Grade wie "M.Sc." werden im Feld "Namenssuffix" erfasst. Adelstitel sind Bestandteil des Familiennamens und zählen nicht zu den Titeln.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält vorangestellte Titel wie "Dr.".</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000081</xdf:id>
+<xdf:name>Namenssuffix</xdf:name>
+<xdf:bezeichnungEingabe>Namenssuffix</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Namenssuffix ist ein Zusatz zu einem Namen, der ohne Komma hinter den Familiennamen gestellt wird. Als Namenssuffix können beispielsweise akademische Grade oder Dienst- und Funktionsbezeichnungen übermittelt werden. Adelstitel sind Bestandteil des Familiennamens und zählen nicht zu den zulässigen Namenssuffixen.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.namenssuffix</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie einen Namenszusatz ein, der hinter den Familiennamen gestellt wird. Als Namenssuffix können akademische Grade (z.B.: M.Sc.) oder Dienst- und Funktionsbezeichnungen übermittelt werden. Vorangestellte akademische Grade wie "Dr." werden im Feld "Titel" erfasst. Adelstitel sind Bestandteil des Familiennamens und zählen nicht zu den zulässigen Namenssuffixen.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält einen Namenszusatz, der hinter den Familiennamen gestellt wird.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000039</xdf:id>
+<xdf:name>Vorname natürliche Person</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Diese Feldgruppe enthält Angaben zum Vornamen einer natürlichen Person und enthält zusätzlich den Rufnamen und frühere Vornamen.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000045</xdf:id>
+<xdf:name>Vorname</xdf:name>
+<xdf:bezeichnungEingabe>Vorname</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>Vorname einer natürlichen Person.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.NameNatuerlichePerson.vorname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie einen Vornamen an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält einen Vornamen.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000076</xdf:id>
+<xdf:name>Rufname</xdf:name>
+<xdf:bezeichnungEingabe>Rufname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der Rufname entspricht einem Vornamen einer natürlichen Person, der bei der Anrede einer Person zu verwenden ist, falls mehrere Vornamen existieren.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.rufname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Rufnamen an. Der Rufname entspricht einem Vornamen einer Person, der bei der Anrede zu verwenden ist, falls mehrere Vornamen existieren.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Rufnamen. Der Rufname entspricht einem Vornamen einer Person, der bei der Anrede zu verwenden ist, falls mehrere Vornamen existieren.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000077</xdf:id>
+<xdf:name>Früherer Vorname</xdf:name>
+<xdf:bezeichnungEingabe>Früherer Vorname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der frühere Vorname entspricht dem ursprünglichen Vornamen einer natürlichen Person, falls eine Namensänderung veranlasst, dabei der frühere Vorname abgelegt und ein abweichender Vorname eingetragen worden ist.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.fruehererVorname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den früheren Vornamen an. Er entspricht dem ursprünglichen Vornamen einer Person, falls eine Namensänderung veranlasst und dabei der frühere Vorname abgelegt worden ist.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den ursprünglichen Vornamen einer Person, falls eine Namensänderung veranlasst und dabei der frühere Vorname abgelegt worden ist.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000073</xdf:id>
+<xdf:name>Nachname natürliche Person  (ohne Ehename und Lebenspartnerschaftsname)</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der Nachname umfasst den Geburtsnamen, den aktuellen Familiennamen sowie frühere Familiennamen.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000013</xdf:id>
+<xdf:name>Familienname</xdf:name>
+<xdf:bezeichnungEingabe>Familienname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Kompatibilität zu EPA in TR XhD v 1.4 sollte Feldlänge min. 120</xdf:beschreibung>
+<xdf:definition>Familienname einer natürlichen Person bestehend aus Nachname, Zuname bzw. Familienname.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.NameNatuerlichePerson.familienname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Nachnamen, Zunamen bzw. Familiennamen an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Nachnamen, Zunamen bzw. Familiennamen.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>{"minLength":"1"}</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000014</xdf:id>
+<xdf:name>Geburtsname</xdf:name>
+<xdf:bezeichnungEingabe>Geburtsname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Kompatibilität zu EPA in TR XhD v 1.4 sollte Feldlänge min. 75</xdf:beschreibung>
+<xdf:definition>Der Geburtsname entspricht dem Familiennamen einer natürlichen Person vor der Schließung der ersten Ehe bzw. dem Eingehen der ersten Lebenspartnerschaft.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.NameNatuerlichePerson.geburtsname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben sie den Geburtsnamen an. Der Geburtname entspricht dem Familiennamen einer Person vor der Schließung der ersten Ehe bzw. dem Eingehen der ersten Lebenspartnerschaft.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Familiennamen einer Person vor der Schließung der ersten Ehe bzw. dem Eingehen der ersten Lebenspartnerschaft.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>{"minLength":"1"}</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000080</xdf:id>
+<xdf:name>Früherer Familienname</xdf:name>
+<xdf:bezeichnungEingabe>Früherer Familienname</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der frühere Familienname einer natürlichen Person entspricht dem Familiennamen einer Person vor der Schließung einer neuen Ehe bzw. dem Eingehen einer neuen Lebenspartnerschaft.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.NameNatuerlichePerson.fruehererFamilienname</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Familiennamen einer Person vor der Schließung einer neuen Ehe bzw. dem Eingehen einer neuen Lebenspartnerschaft an, falls sich daraus eine Änderung des Familiennamen ergibt.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Familiennamen einer Person vor der Schließung einer neuen Ehe bzw. dem Eingehen einer neuen Lebenspartnerschaft, falls sich daraus eine Änderung des Familiennamen ergibt.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000034</xdf:id>
+<xdf:name>Geburtsangaben</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Unter "Geburtsangaben" werden geburtsbezogene Informationen zusammengefasst.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.Geburt</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000066</xdf:id>
+<xdf:name>Geburtsdatum</xdf:name>
+<xdf:bezeichnungEingabe>Geburtsdatum</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Dieses Feld beinhaltet das Geburtsdatum, also Tag, Monat und Jahr der Vollendung der Geburt.</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.Geburt.datum</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie Tag, Monat und Jahr der Geburt an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält das Geburtsdatum, also Tag, Monat und Jahr der Geburt.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000067</xdf:id>
+<xdf:name>Geburtsort</xdf:name>
+<xdf:bezeichnungEingabe>Geburtsort</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Kompatibilität zu EPA in TR XhD v 1.4 sollte Feldlänge min. 80&#13;
+</xdf:beschreibung>
+<xdf:definition>Der Ort der Geburt einer natürlichen Person</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.Geburt.geburtsort</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Bezeichnung des Ortes an, in dem die Person geboren wurde (z.B.: Berlin).</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Bezeichnung des Ortes, in dem die Person geboren wurde.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>{"minLength":"1","maxLength":"80"}</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000038</xdf:id>
+<xdf:name>Staat</xdf:name>
+<xdf:bezeichnungEingabe>Staat</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Der Staat, in dem die natürliche Person lebt.</xdf:definition>
+<xdf:bezug>Xmeld.Anschrift.Melderecht.Ausland.staat&#13;
+Codeliste laut Xmeld und DSMeld: Codeliste Destatis Staatsgebiete (urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsgebiete)</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Namen des Staates bzw. Landes an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Namen des Staates bzw. Landes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+<xdf:codeliste>
+<xdf:id>C00000009</xdf:id>
+<xdf:name>Staat</xdf:name>
+<xdf:bezeichnungEingabe>Staat</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition/>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>inVorbereitung</code>
+</xdf:status>
+<xdf:kennung>urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat</xdf:kennung>
+<xdf:version>2017-01-01</xdf:version>
+<xdf:langname>Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</xdf:langname>
+</xdf:codeliste>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000110</xdf:id>
+<xdf:name>Berechtigung WBK</xdf:name>
+<xdf:bezeichnungEingabe>Berechtigung WBK</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>-</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000024</xdf:id>
+<xdf:name>Bestätigung Gültigkeit der Urkunde</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung/>
+<xdf:definition>Die Bestätigung der Gültigkeit einer Urkunde geschieht durch eine schriftliche Bestätigung sowie dem zugehörigen Stempel der auszustellenden Behörde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000021</xdf:id>
+<xdf:name>Schriftliche Bestätigung (ohne Name)</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die schriftliche Bestätigung umfasst Datum, Ort und Unterschrift.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000008</xdf:id>
+<xdf:name>Datum</xdf:name>
+<xdf:bezeichnungEingabe>Datum</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Falls technisch möglich kann dieses Feld auch automatisch mit dem aktuellen Datum belegt werden.</xdf:beschreibung>
+<xdf:definition>Dem Kalender entsprechende Zeitangabe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das aktuelle Datum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000035</xdf:id>
+<xdf:name>Ort</xdf:name>
+<xdf:bezeichnungEingabe>Ort</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Kompatibilität zu EPA in TR XhD v 1.4 sollte Feldlänge min. 44</xdf:beschreibung>
+<xdf:definition>Der "Ort" enthält den Namen eines Ortes (Gemeinde, Ortschaft oder Stadt).</xdf:definition>
+<xdf:bezug>XÖV-Kernkomponente.Anschrift.ort</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Ort an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Ort.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>{"minLength":"1","maxLength":"60"}</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000044</xdf:id>
+<xdf:name>Unterschrift</xdf:name>
+<xdf:bezeichnungEingabe>Unterschrift</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Hier handelt es sich um ein Unterschriftsfeld. Falls technisch möglich kann dieses Feld bei digitaler Umsetzung durch alternative Mittel ersetzt werden, die dem vorgeschriebenen Vertrauensniveau und ggfs. Schriftformerfordernis genügen.</xdf:beschreibung>
+<xdf:definition>Eine Unterschrift ist die handschriftliche, eigenhändige Namenszeichnung auf Schriftstücken durch eine natürliche Person mit mindestens dem Familiennamen.&#13;
+&#13;
+Vgl. http://de.wikipedia.org/wiki/Unterschrift</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>HAR</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie ihre Unterschrift an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Unterschrift.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000025</xdf:id>
+<xdf:name>Stempel</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Diese Gruppe besteht aus dem Dienstsiegel sowie dem Stempel der Ausstellungsbehörde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000059</xdf:id>
+<xdf:name>Stempel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Stempel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Das durch ein Gerät auf ein Papier aufgebrachtes Symbol oder Siegel der Ausstellungsbehörde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Stempel der Ausstellungsbehörde.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Stempel der Ausstellungsbehörde.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000048</xdf:id>
+<xdf:name>Waffen</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung/>
+<xdf:definition>Eine Waffe ist ein Gerät, Instrument, Vorrichtung als Mittel zum Angriff auf einen Gegner, zum Erlegen von Tieren, zur Zerstörung von Bauwerken, technischen Anlagen usw. oder zur Verteidigung (z. B. Hieb- oder Stichwaffe, Feuerwaffe).</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000049</xdf:id>
+<xdf:name>Waffenkategorie</xdf:name>
+<xdf:bezeichnungEingabe>Waffenkategorie</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Kategoriebezeichnung von Schusswaffen nach EU-Richtlinie 2008/51/EG</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.waffenkategorie</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Waffenkategorie an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält Angaben zur Waffenkategorie.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>Waffenkategorie</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000050</xdf:id>
+<xdf:name>Waffentyp</xdf:name>
+<xdf:bezeichnungEingabe>Waffentyp</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Beschreibt die nach Anlage 1 Abschnitt 3 WaffG genannten Bezeichnungen innerhalb der Kategorien A-D.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.waffentypAnlage1</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie den Waffentyp an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält Angaben zum Waffentyp.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>Waffentyp</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000024</xdf:id>
+<xdf:name>Kaliber (Liste)</xdf:name>
+<xdf:bezeichnungEingabe>Kaliber</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Nicht-abgeschlossene Liste aller Kaliber.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.munitionsbezeichnungKaliber</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Wählen Sie das Munitionskaliber aus.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld gibt an, um welches Munitionskaliber es sich handelt.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+<xdf:codeliste>
+<xdf:id>C00000004</xdf:id>
+<xdf:name>MunitionsbezeichnungKaliberCode</xdf:name>
+<xdf:bezeichnungEingabe>MunitionsbezeichnungKaliberCode</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition/>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>inVorbereitung</code>
+</xdf:status>
+<xdf:kennung>urn:de:xwaffe:codelisten:munitionsbezeichnungkaliber</xdf:kennung>
+<xdf:version>2017-05-08</xdf:version>
+<xdf:langname>MunitionsbezeichnungKaliberCode zum Standard XWaffe</xdf:langname>
+</xdf:codeliste>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000023</xdf:id>
+<xdf:name>Kaliber (Freitext)</xdf:name>
+<xdf:bezeichnungEingabe>Kaliber</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Munitionsbezeichnung sollte eine eindeutige Bezeichnung der für die betreffende Schusswaffe zugelassenen Munition darstellen.
+
+Bei der Erstdatenbefüllung können möglicherweise aber nicht alle Werte den vom NWR vorgegebenen Katalogwerten angepasst werden. Für diese Fälle ist dann pro Kaliber/Munitionsbezeichnung ein Freitextfeld vorgesehen.
+
+Diese Felder sind nach der Erstdatenbefüllung nicht mehr zu verwenden, sondern ausschließlich die jeweiligen Katalogfelder.
+
+Ist die Munitionsbezeichnung nicht bekannt, ist das Datenfeld auf "unbekannt" zu setzen und bei allen Waffen, die noch verwendet werden, zeitnah das Kaliber amtlich festzustellen.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.munitionsbezeichnungKaliberText</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das Munitionskaliber an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält Das Munitionskaliber.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000019</xdf:id>
+<xdf:name>Herstellerbezeichnung (Liste)</xdf:name>
+<xdf:bezeichnungEingabe>Herstellerbezeichnung</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Herstellerbezeichnung (Namen, die Firma oder eingetragene Marke) stellt eine Kennzeichnung einer Schusswaffe dar, die vom Hersteller oder Importeur dauerhaft auf
+der Schusswaffe angebracht wurde.
+
+Die Schusswaffe darf nur eine Herstellerbezeichnung tragen. Ist eine Schusswaffe aus
+Waffenteilen hergestellt worden, auf denen noch alte Herstellerbezeichnungen vorhanden
+sind, sind diese nicht mehr zu verwenden, sondern die Bezeichnung des tatsächlichen
+Herstellers/Importeurs.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.herstellerbezeichnung</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Wählen Sie die Herstellerbezeichnung der Waffe aus.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält Informationen zu Herstellerbezeichnung der Waffe.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>select</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung>Herstellerbezeichnung</xdf:praezisierung>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000018</xdf:id>
+<xdf:name>Herstellerbezeichnung (Freitext)</xdf:name>
+<xdf:bezeichnungEingabe>Herstellerbezeichnung (Freitext)</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Herstellerbezeichnung (Namen, die Firma oder eingetragene Marke) stellt eine
+Kennzeichnung einer Schusswaffe dar, die vom Hersteller oder Importeur dauerhaft auf
+der Schusswaffe angebracht wurde.
+
+Die Schusswaffe darf nur eine Herstellerbezeichnung tragen. Ist eine Schusswaffe aus
+Waffenteilen hergestellt worden, auf denen noch alte Herstellerbezeichnungen vorhanden
+sind, sind diese nicht mehr zu verwenden, sondern die Bezeichnung des tatsächlichen
+Herstellers/Importeurs.
+
+Die Herstellerbezeichnung kann aus zulässigen Zahlen, Zeichen und Sonderzeichen
+bestehen.
+
+Die Herstellerbezeichnung ist als Standardkatalog hinterlegt. Sie kann aber auch, da ein
+abschließendes Verzeichnis nicht möglich ist, als Freitexteingabe erfolgen. Grundsätzlich
+ist jedoch zuvor der Katalog auf entsprechende Werte zu prüfen, damit dieser Wert besser
+recherchierbar ist und so mögliche Fehlerquellen vermieden werden.
+
+Ist die Herstellerbezeichnung bekannt und nicht im Katalog, ist "nicht im Katalog
+aufgeführter Hersteller" zu wählen.
+
+Verfügt die Waffe über keine Herstellerbezeichnung, ist die Bezeichnung "ohne" zu
+wählen.
+
+Ist die Herstellerbezeichnung nicht bekannt, ist das Datenfeld auf "unbekannt" zu setzen
+und zeitnah amtlich festzustellen, ob eine Herstellerbezeichnung ermittelt werden kann.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.herstellerbezeichnungText</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben SIe die Herstellerbezeichnung der Waffe als Freitext an, falls nicht in der Liste mit Herstellern vorhanden.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält Informationen zur Herstellerbezeichnung der Waffe.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000028</xdf:id>
+<xdf:name>Modellbezeichnung</xdf:name>
+<xdf:bezeichnungEingabe>Modellbezeichnung</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Modellbezeichnung stellt eine vom Hersteller oder Importeur vergebene zusätzliche Bezeichnung zur Unterscheidung einer Schusswaffe dar.
+
+Die Modellbezeichnung kann aus zulässigen Zahlen, Zeichen und Sonderzeichen bestehen.
+
+Verfügt die Waffe über keine Modellbezeichnung, ist das Datenfeld auf "ohne" zu setzen.
+
+Ist die Modellbezeichnung nicht bekannt, ist das Datenfeld auf "unbekannt" zu setzen.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.modellbezeichnung</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Modellbezeichnung der Waffe an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Modellbezeichnung der Waffe.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:4</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000017</xdf:id>
+<xdf:name>Hersteller- bzw. Seriennummer</xdf:name>
+<xdf:bezeichnungEingabe>Hersteller- bzw. Seriennummer</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Die Seriennummer stellt eine eindeutige, individuelle Kennzeichnung einer Schusswaffe
+dar, die vom Hersteller oder Importeur oder auf Veranlassung einer zuständigen Behörde/
+Stelle dauerhaft auf der Schusswaffe angebracht wurde.
+
+Die Schusswaffe kann aufgrund der Seriennummer von baugleichen Waffen unterschieden
+werden.
+
+Die Seriennummer kann aus zulässigen Zahlen, Zeichen und Sonderzeichen bestehen.
+
+Die Seriennummer wird ohne Leerzeichen (Space) geschrieben und gespeichert. Sie ist
+dadurch besser recherchierbar, mögliche Fehlerquellen werden so vermieden.
+
+Verfügt die Waffe über keine Seriennummer, ist die Bezeichnung "ohne" zu wählen.
+Ist die Seriennummer nicht bekannt, ist die Bezeichnung "unbekannt" zu wählen. Es ist
+dann zeitnah zu prüfen, ob eine amtliche Nummer zu vergeben ist.
+
+Die führende Nummer ergibt sich aus § 24 Abs. 1 Satz 2 WaffG.
+
+Für den Fall, dass auf den wesentlichen Teilen einer Schusswaffe differente Nummern
+vorhanden sind, kann die zuständige Behörde bis zu drei weitere (optionale)
+Nummernfelder (sog. Sekundärnummern) zusätzlich befüllen.
+
+Die Sekundärnummernfelder verfügen jeweils über ein Bemerkungsfeld (fester Katalog -
+Waffenteile), in dem das mit der Nummer versehene Waffenteil anzugeben ist.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.seriennummer</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Seriennummer der Waffe an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Seriennummer der Waffe.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000031</xdf:id>
+<xdf:name>Munitionserwerbserlaubnis zur Waffe</xdf:name>
+<xdf:bezeichnungEingabe>Munitionserlaubnis zur Waffe</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Das Feld gibt an, ob für diese Schusswaffe eine Erlaubnis zum Erwerb und Besitz von Munition durch Eintrag in eine Waffenbesitzkarte erteilt wurde.
+
+Ja = Munitionserwerbserlaubnis wurde durch Eintrag erteilt.
+
+Nein = Munitionserwerbserlaubnis wurde nicht erteilt.</xdf:definition>
+<xdf:bezug>XWaffe.Waffe.munitionserwerbserlaubnis</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie an, ob für die Waffe eine Erlaubnis zum Erwerb und Besitz von Munition durch Eintrag in eine Waffenbesitzkarte erteilt wurde.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld gibt an, ob für diese Schusswaffe eine Erlaubnis zum Erwerb und Besitz von Munition durch Eintrag in eine Waffenbesitzkarte erteilt wurde.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>bool</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000058</xdf:id>
+<xdf:name>Berechtigt zum Erwerb der Waffe</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Berechtigt zum Erwerb von einer Waffe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000001</xdf:id>
+<xdf:name>Ablaufdatum</xdf:name>
+<xdf:bezeichnungEingabe>Ablaufdatum</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>Das Ablaufdatum verweist auf das Ende eines Zeitraumes oder einer Frist.</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das Ablaufdatum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält das Ablaufdatum.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000059</xdf:id>
+<xdf:name>Berechtigt zum Erwerb und Besitz von für die Waffe bestimmte oder zugelassene Munition</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Berechtigt zum Erwerb von entsprechender Munition.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000001</xdf:id>
+<xdf:name>Ablaufdatum</xdf:name>
+<xdf:bezeichnungEingabe>Ablaufdatum</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>Das Ablaufdatum verweist auf das Ende eines Zeitraumes oder einer Frist.</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das Ablaufdatum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält das Ablaufdatum.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000060</xdf:id>
+<xdf:name>Schusswaffe erworben oder angemeldet</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Dokumentiert, zu welchem Zeitpunkt die Schusswaffe erworben oder angemeldet ist.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000008</xdf:id>
+<xdf:name>Datum</xdf:name>
+<xdf:bezeichnungEingabe>Datum</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Falls technisch möglich kann dieses Feld auch automatisch mit dem aktuellen Datum belegt werden.</xdf:beschreibung>
+<xdf:definition>Dem Kalender entsprechende Zeitangabe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das aktuelle Datum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000032</xdf:id>
+<xdf:name>Organisationseinheit Name</xdf:name>
+<xdf:bezeichnungEingabe>Organisationseinheit Name</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Bezeichnung der Organisationseinheit.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.Organisationseinheit.name</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Bezeichnung der Organisationseinheit an (z.B. den Namen der Abteilung).</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Bezeichnung der Organisationseinheit.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000061</xdf:id>
+<xdf:name>Schusswaffe überlassen</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Dokumentiert das Überlassen einer Schusswaffe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000008</xdf:id>
+<xdf:name>Datum</xdf:name>
+<xdf:bezeichnungEingabe>Datum</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Falls technisch möglich kann dieses Feld auch automatisch mit dem aktuellen Datum belegt werden.</xdf:beschreibung>
+<xdf:definition>Dem Kalender entsprechende Zeitangabe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das aktuelle Datum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000032</xdf:id>
+<xdf:name>Organisationseinheit Name</xdf:name>
+<xdf:bezeichnungEingabe>Organisationseinheit Name</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Bezeichnung der Organisationseinheit.</xdf:definition>
+<xdf:bezug>XÖV-Kernkoponente.Organisationseinheit.name</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>ABS</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie die Bezeichnung der Organisationseinheit an (z.B. den Namen der Abteilung).</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält die Bezeichnung der Organisationseinheit.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>0:*</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000066</xdf:id>
+<xdf:name>Amtliche Eintragungen</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Enthält Meta-Daten, die im Falle einer ofiziellen amtlichen Eintragung (Dokument) entstehen.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>0:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000064</xdf:id>
+<xdf:name>Amtliche Eintragung</xdf:name>
+<xdf:bezeichnungEingabe>Amtliche Eintragung</xdf:bezeichnungEingabe>
+<xdf:beschreibung/>
+<xdf:definition>Enthält den Inhalt der fachlichen Eintragung.</xdf:definition>
+<xdf:bezug/>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dieses Feld enthält den Inhalt der fachlichen Eintragung.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Inhalt der fachlichen Eintragung.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000008</xdf:id>
+<xdf:name>Datum</xdf:name>
+<xdf:bezeichnungEingabe>Datum</xdf:bezeichnungEingabe>
+<xdf:beschreibung>Falls technisch möglich kann dieses Feld auch automatisch mit dem aktuellen Datum belegt werden.</xdf:beschreibung>
+<xdf:definition>Dem Kalender entsprechende Zeitangabe.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Geben Sie das aktuelle Datum an.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe/>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>input</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>date</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeldgruppe>
+<xdf:id>G00000025</xdf:id>
+<xdf:name>Stempel</xdf:name>
+<xdf:bezeichnungEingabe/>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Diese Gruppe besteht aus dem Dienstsiegel sowie dem Stempel der Ausstellungsbehörde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe/>
+<xdf:hilfetextAusgabe/>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000058</xdf:id>
+<xdf:name>Dienstsiegel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Dienstsiegel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Ein Dienstsiegel ist ein Symbol eines Amtes, mit dem Dokumente rechtsverbindlich gekennzeichnet werden.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Dienstsiegel des Amtes.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Das Feld enthält das Dienstsiegel des Amtes.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+<xdf:struktur>
+<xdf:anzahl>1:1</xdf:anzahl>
+<xdf:bezug/>
+<xdf:enthaelt>
+<xdf:datenfeld>
+<xdf:id>F00000059</xdf:id>
+<xdf:name>Stempel Ausstellungsbehörde</xdf:name>
+<xdf:bezeichnungEingabe>Stempel</xdf:bezeichnungEingabe>
+<xdf:beschreibung>-</xdf:beschreibung>
+<xdf:definition>Das durch ein Gerät auf ein Papier aufgebrachtes Symbol oder Siegel der Ausstellungsbehörde.</xdf:definition>
+<xdf:bezug>-</xdf:bezug>
+<xdf:status listURI="urn:xoev-de:fim:codeliste:xdatenfelder.status" listVersionID="1.0">
+<code>aktiv</code>
+</xdf:status>
+<xdf:schemaelementart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.schemaelementart" listVersionID="1.0">
+<code>RNG</code>
+</xdf:schemaelementart>
+<xdf:hilfetextEingabe>Stempel der Ausstellungsbehörde.</xdf:hilfetextEingabe>
+<xdf:hilfetextAusgabe>Dieses Feld enthält den Stempel der Ausstellungsbehörde.</xdf:hilfetextAusgabe>
+<xdf:feldart listURI="urn:xoev-de:fim:codeliste:xdatenfelder.feldart" listVersionID="1.0">
+<code>label</code>
+</xdf:feldart>
+<xdf:datentyp listURI="urn:xoev-de:fim:codeliste:xdatenfelder.datentyp" listVersionID="1.0">
+<code>text</code>
+</xdf:datentyp>
+<xdf:praezisierung/>
+<xdf:inhalt/>
+</xdf:datenfeld>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:datenfeldgruppe>
+</xdf:enthaelt>
+</xdf:struktur>
+</xdf:stammdatenschema>
+</xdf:xdatenfelder.stammdatenschema.0102001>
