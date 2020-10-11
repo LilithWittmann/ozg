@@ -1,4 +1,4 @@
-from fim.parser import FIMParser
+from ozg.fim.parser import FIMParser
 
 class TestFimParserInit:
 
