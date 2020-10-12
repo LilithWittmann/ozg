@@ -5,11 +5,10 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+twine = "*"
 
 [packages]
 untangle = "*"
-twine = "*"
-ozg = {path = "./dist/ozg-0.0.3-py3-none-any.whl"}
 requests = "*"
 
 [requires]

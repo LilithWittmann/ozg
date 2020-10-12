@@ -1,5 +1,12 @@
 language: python
 python:
-  - "3.8"
+- '3.8'
 install: pipenv install
 script: pytest
+deploy:
+  provider: pypi
+  user: Lilith
+  on:
+    branch: master
+  password:
+    secure: Gj5mopK4DPti8kes5k5ALKJyFKoeKYLu2e4OClgmePU3m3WI8j1XGL6pCuKFjAPkWGY/a9xZBSnFIc+AHzi2KYc4cmptazpYzu+pPYWOWlje2fr3G09gcZ23D+0Rv2twwV0NR7F6HonyoE2jumKdookdQJKJmDtdHWagStmRu8H0Ofgl5H2iIeR74Sn91GgMrk5SH5bNlNitt294JIDphg1AYhIH4TqKtg45Offubh6crK4Ub3lzYC05opHAy998mG95Xj1Rl+0y359gPBYiHXJELtfbu5J5GMCM7Xf1oeeqDp8c11ZFtuHFP0vJvKYatpbFBXQcFdSzo2ubSXcWuk0r4kczBf6bv5If1z3ZiRuq1s2UKNnHLMo5iQvBjI/vT/G17vsgLiTCnM9EQN8isSQO+7y+6qRcXif280BIOfwPJblr4kbllsFTb3LI+gGL9tPoCLN6SP4UVQyuLGccokT1x17gKa432O8fqSUkkLy6WpTMkYZuzLCGYBRMZYA1yjp7p5UxauE/IewTb8SN4EwBZdtujyUeu/KckjKaLyeENv5gtC9R8O1lCcqV49pW1McVGp/npzg8afA87fA5RL4PS4EaORbwNxnqsRqfJihMP5P8X0zK92TAROWbDu0fWWBliLlxmvj0vt+VWrt1SEORWhugkC+JFe//p+C+dj4=
