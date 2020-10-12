@@ -23,8 +23,8 @@ class FIMHeaderMixin(object):
         self._name = base_schema.xdf_name.cdata
         self._description = self.set_none_if_empty(base_schema.xdf_beschreibung.cdata)
         self._input_name = self.set_none_if_empty(base_schema.xdf_bezeichnungEingabe.cdata)
-        self._internal_definition = base_schema.xdf_definition.cdata
-        self._relation = base_schema.xdf_bezug.cdata
+        self._internal_definition = self.set_none_if_empty(base_schema.xdf_definition.cdata)
+        self._relation = self.set_none_if_empty(base_schema.xdf_bezug.cdata)
 
         # optional fields by fim standard
         if len(element.get_elements("xdf_bezeichnungAusgabe")) > 0:

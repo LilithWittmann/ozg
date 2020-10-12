@@ -28,9 +28,9 @@ class TestFimParserInit:
         assert parser.name == "Antrag Blaue Karte EU"
         assert parser.output_name is None
         assert parser.input_name == "Antrag auf Blaue Karte EU"
-        assert parser.description == ""
+        assert parser.description is None
         assert parser.legal_definition == "§ 19a AufenthG"
-        assert parser.internal_definition == ""
+        assert parser.internal_definition is None
 
     def test_form_parser_v1(self):
         parser = FIMParser(open("tests/fixtures/WaBeKa.xml").read())
