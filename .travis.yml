@@ -5,7 +5,7 @@ install: pipenv install
 script: pytest
 deploy:
   provider: pypi
-  user: Lilith
+  user: "__token__"
   on:
     branch: master
   password:
