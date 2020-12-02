@@ -7,7 +7,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setuptools.setup(
     name="ozg", # Replace with your own username
-    version="0.0.5",
+    version="0.0.7",
     author="Lilith Wittmann",
     author_email="mail@lilithwittmann.de",
     include_package_data=True,

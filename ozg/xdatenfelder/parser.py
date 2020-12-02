@@ -181,7 +181,7 @@ class FIMStructure(FIMElement):
             element = {
                 "minItems": self.min_items,
                 "maxItems": self.max_items,
-                "title": f"Liste von {self.contains.name}" if self.max_items > 1 else self.contains.name,
+                "title": f"Liste von {self.contains.input_name}" if self.max_items > 1 else self.contains.input_name,
                 "type": "array",
                 "items": self.contains.to_json()
 
@@ -189,7 +189,7 @@ class FIMStructure(FIMElement):
 
         if level == 0:
             element = {
-                "title": self.contains.name,
+                "title": self.contains.input_name,
                 "description": self.contains.description,
                 "type": "object",
                 "properties": {
@@ -256,7 +256,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
         """
         return self._data_type
 
-    def to_json(self):
+    def to_json(self, level=None):
         """
         :return: json schema representation of the field
         """
@@ -273,7 +273,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
         if self.field_type == "input":
             a = mapping[self.data_type]
             a["title"] = self.input_name if self.input_name else self.name
-            a["description"] = self._input_hint if self._input_hint else self.description
+            a["description"] = self._input_hint if self._input_hint else None
 
             if self._default_value:
                 a["default"] = self.default_value
@@ -297,7 +297,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
                 any_of.append(choice[1])
             return {
                 "title": self.input_name if self.input_name else self.name,
-                "description": self._input_hint if self._input_hint else self.description,
+                "description": self._input_hint if self._input_hint else None,
                 "enum": any_of,
                 "type": "string"
             }
@@ -311,7 +311,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
         else:
             return {
                 "title": self.input_name if self.input_name else self.name,
-                "description": self._input_hint if self._input_hint else self.description,
+                "description": self._input_hint if self._input_hint else None,
                 "type": "string"
             }
 
@@ -334,13 +334,13 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
 
     ELEMENT_TYPE = "field_group"
 
-    def to_json(self):
+    def to_json(self, level=None):
         """
         :return: a json-schema object
         """
         base = {
             "title": self.name,
-            "description": self.description,
+            "x-description": self.description,
             "type": "object",
             "properties": {}
 
@@ -411,8 +411,7 @@ class FIMParser(FIMHeaderMixin):
             for element in self.parsed_xml.children[0].xdf_stammdatenschema.xdf_struktur:
                 self.form.append(FIMStructure(element, self))
         else:
-            for element in self.parsed_xml.children[0].xdf_datenfeldgruppe.xdf_struktur:
-                self.form.append(FIMStructure(element, self))
+            self.form.append(FIMFieldGroup( self.parsed_xml.children[0].xdf_datenfeldgruppe, self))
 
     @property
     def xml(self) -> str:
@@ -439,10 +438,10 @@ class FIMParser(FIMHeaderMixin):
         return self._form
 
     @property
-    def to_json(self):
+    def to_json(self, level=None):
         base = {
             "title": self.input_name,
-            "description": self.description,
+            "x-description": self.description,
             "type": "object",
             "properties": {},
             "x-display": "expansion-panels"

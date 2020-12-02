@@ -51,7 +51,7 @@ class TestFimParserInit:
         print(parser.to_json)
 
     def test_form_section_parser_v2(self):
-        parser = FIMParser("https://gist.githubusercontent.com/LilithWittmann/7ebb89910adbd4e433f7033ae369b465/raw/3fc71ac3bf6197cd3b4f387eae32ce2a94864a55/familie.xml")
+        parser = FIMParser("https://gist.githubusercontent.com/LilithWittmann/d8a7bb6c64a25e1dd1a0989d9042b856/raw/3742311b29388474464b6bab0833cffaf5b56d2c/G60000086V1.0.xml")
         print(parser.to_json)
 
     def test_from_url(self):
