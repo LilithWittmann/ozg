@@ -50,6 +50,10 @@ class TestFimParserInit:
 
         print(parser.to_json)
 
+    def test_form_section_parser_v2(self):
+        parser = FIMParser("https://gist.githubusercontent.com/LilithWittmann/7ebb89910adbd4e433f7033ae369b465/raw/3fc71ac3bf6197cd3b4f387eae32ce2a94864a55/familie.xml")
+        print(parser.to_json)
+
     def test_from_url(self):
         parser = FIMParser("https://fimportal.de/detail?tx_fimportalcatalog_fimsearch%5Baction%5D=download&tx_fimportalcatalog_fimsearch%5Bcontroller%5D=CatalogEntry&tx_fimportalcatalog_fimsearch%5BdocumentIndex%5D=1&tx_fimportalcatalog_fimsearch%5Bid%5D=DS00000123&cHash=0760c920aa906ab17ecef77281781f09")
         print(parser.to_json)

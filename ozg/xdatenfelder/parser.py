@@ -136,6 +136,8 @@ class FIMStructure(FIMElement):
             self._contains = FIMField(self._definition.xdf_enthaelt.xdf_datenfeld, self._fim_parser)
         elif len(self._definition.xdf_enthaelt.get_elements("xdf_datenfeldgruppe")) == 1:
             self._contains = FIMFieldGroup(self._definition.xdf_enthaelt.xdf_datenfeldgruppe, self._fim_parser)
+        elif len(self._definition.get_elements("xdf_datenfeldgruppe")) == 1:
+            self._contains = FIMFieldGroup(self._definition.xdf_datenfeldgruppe, self._fim_parser)
         else:
             raise FIMParserError("FIMStructure contains unrecognised element")
 
@@ -378,7 +380,15 @@ class FIMParser(FIMHeaderMixin):
             self._version = override_version_check
 
         if not no_parsing:
-            self._parse_header(self._parsed_xml.children[0].xdf_stammdatenschema)
+            if len(self.parsed_xml.children[0].get_elements("xdf_stammdatenschema")) > 0:
+                self._parse_header(self._parsed_xml.children[0].xdf_stammdatenschema)
+            else:
+                self._name = "Data Fields"
+                self._description = None
+                self._input_name = None
+                self._internal_definition = None
+                self._relation = None
+
             self._parse_structure()
 
     def _check_fim_version(self):
@@ -396,8 +406,13 @@ class FIMParser(FIMHeaderMixin):
         :return:
         """
         self._form = []
-        for element in self.parsed_xml.children[0].xdf_stammdatenschema.xdf_struktur:
-            self.form.append(FIMStructure(element, self))
+        print()
+        if len(self.parsed_xml.children[0].get_elements("xdf_stammdatenschema")) > 0:
+            for element in self.parsed_xml.children[0].xdf_stammdatenschema.xdf_struktur:
+                self.form.append(FIMStructure(element, self))
+        else:
+            for element in self.parsed_xml.children[0].xdf_datenfeldgruppe.xdf_struktur:
+                self.form.append(FIMStructure(element, self))
 
     @property
     def xml(self) -> str:
