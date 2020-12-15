@@ -174,8 +174,14 @@ class FIMStructure(FIMElement):
     def id(self):
         return self.contains.id
 
+    @property
+    def is_required(self):
+        if self.min_items > 0:
+            return True
+        return False
+
     def to_json(self, level=None):
-        if self.max_items == 1 and self.min_items == 1:
+        if self.max_items == 1 and self.min_items <= 1:
             element = self._contains.to_json()
         else:
             element = {
@@ -186,6 +192,7 @@ class FIMStructure(FIMElement):
                 "items": self.contains.to_json()
 
             }
+
 
         if level == 0:
             element = {
@@ -342,13 +349,16 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
             "title": self.name,
             "x-description": self.description,
             "type": "object",
-            "properties": {}
+            "properties": {},
+            "required": []
 
         }
 
         last_element = None
         for i in self.fields:
             base["properties"][i.contains.id] = i.to_json()
+            if i.is_required:
+                base["required"].append(i.contains.id)
 
         return base
 
