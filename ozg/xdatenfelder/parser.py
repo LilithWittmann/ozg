@@ -289,9 +289,9 @@ class FIMField(FIMElement, FIMHeaderMixin):
                 try:
                     validation = json.loads(self._validation_details)
                     if "minLength" in validation:
-                        a["minLength"] = validation["minLength"]
+                        a["minLength"] = int(validation["minLength"])
                     if "maxLength" in validation:
-                        a["maxLength"] = validation["maxLength"]
+                        a["maxLength"] = int(validation["maxLength"])
                     if "pattern" in validation:
                         a["pattern"] = validation["pattern"]
                 except ValueError:
