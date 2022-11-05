@@ -449,7 +449,8 @@ class FIMParser(FIMHeaderMixin):
 
     @property
     def to_json(self, level=None):
-        base = {
+        json_schema = {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": self.input_name,
             "x-description": self.description,
             "type": "object",
@@ -457,6 +458,6 @@ class FIMParser(FIMHeaderMixin):
             "x-display": "expansion-panels"
         }
         for i in self.form:
-            base["properties"][i.id] = i.to_json(level=0)
+            json_schema["properties"][i.id] = i.to_json(level=0)
 
-        return base
+        return json_schema
