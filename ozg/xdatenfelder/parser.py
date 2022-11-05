@@ -368,11 +368,11 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
         }
 
         last_element = None
-        for i in self.fields:
-            base["properties"][i.contains.id], defs = i.to_json(defs)
+        for fim_structure in self.fields:
+            base["properties"][fim_structure.contains.id], defs = fim_structure.to_json(defs)
 
-            if i.is_required:
-                base["required"].append(i.contains.id)
+            if fim_structure.is_required:
+                base["required"].append(fim_structure.contains.id)
 
         return base, defs
 
@@ -477,8 +477,8 @@ class FIMParser(FIMHeaderMixin):
         defs = {}
 
         # add root properties and update fill definitions
-        for i in self.form:
-            json_schema["properties"][i.id], defs = i.to_json(defs)
+        for fim_structure in self.form:
+            json_schema["properties"][fim_structure.id], defs = fim_structure.to_json(defs)
 
         json_schema['$defs'] = defs
 
