@@ -347,7 +347,7 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
         """
         base = {
             "title": self.name,
-            "x-description": self.description,
+            "description": self.description,
             "type": "object",
             "properties": {},
             "required": []
@@ -449,10 +449,11 @@ class FIMParser(FIMHeaderMixin):
 
     @property
     def to_json(self, level=None):
+        # create json schema skeleton
         json_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "title": self.input_name,
-            "x-description": self.description,
+            "description": self.description,
             "type": "object",
             "properties": {},
             "x-display": "expansion-panels"
