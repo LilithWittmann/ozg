@@ -180,19 +180,32 @@ class FIMStructure(FIMElement):
             return True
         return False
 
-    def to_json(self, level=None):
-        if self.max_items == 1 and self.min_items <= 1:
-            element = self._contains.to_json()
+    def to_json(self, defs, level=None):
+        if isinstance(self.contains, FIMField):
+            fim_structure_schema = self.contains.to_json()
+        elif isinstance(self.contains, FIMFieldGroup):
+            fim_structure_schema, defs = self.contains.to_json(defs)
         else:
+            raise RuntimeError("Unknown element inside FIMStructure")
+
+        # add containing element to defs
+        if self.contains.id not in defs:
+            defs[self.contains.id] = fim_structure_schema
+
+        if self.max_items == 1 and self.min_items <= 1:
+            # this FIMStructure consists of only one (optional or required) instance of the contained element
+            # return only reference to defs
+            element = {"$ref": "#/$defs/" + self.contains.id}
+        else:
+            # this FIMStrucutre consists of more than one instance of the contained element
+            # return an array of elements of the contained element type
             element = {
                 "minItems": self.min_items,
                 "maxItems": self.max_items,
                 "title": f"Liste von {self.contains.input_name}" if self.max_items > 1 else self.contains.input_name,
                 "type": "array",
-                "items": self.contains.to_json()
-
+                "items": {"$ref": "#/$defs/" + self.contains.id}
             }
-
 
         if level == 0:
             element = {
@@ -202,10 +215,9 @@ class FIMStructure(FIMElement):
                 "properties": {
                     self.id: element
                 }
-
             }
 
-        return element
+        return element, defs
 
 
 class FIMField(FIMElement, FIMHeaderMixin):
@@ -277,6 +289,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
             "file": {"type": "string", "x-display": "file"},
             "obj": {"type": "string", "x-display": "data-url"},
         }
+
         if self.field_type == "input":
             a = mapping[self.data_type]
             a["title"] = self.input_name if self.input_name else self.name
@@ -341,7 +354,7 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
 
     ELEMENT_TYPE = "field_group"
 
-    def to_json(self, level=None):
+    def to_json(self, defs, level=None):
         """
         :return: a json-schema object
         """
@@ -356,11 +369,12 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
 
         last_element = None
         for i in self.fields:
-            base["properties"][i.contains.id] = i.to_json()
+            base["properties"][i.contains.id], defs = i.to_json(defs)
+
             if i.is_required:
                 base["required"].append(i.contains.id)
 
-        return base
+        return base, defs
 
     def __str__(self):
         return f'{self.name} [{", ".join([str(e) for e in self.fields])}]'
@@ -458,7 +472,14 @@ class FIMParser(FIMHeaderMixin):
             "properties": {},
             "x-display": "expansion-panels"
         }
+
+        # definitions
+        defs = {}
+
+        # add root properties and update fill definitions
         for i in self.form:
-            json_schema["properties"][i.id] = i.to_json(level=0)
+            json_schema["properties"][i.id], defs = i.to_json(defs)
+
+        json_schema['$defs'] = defs
 
         return json_schema
