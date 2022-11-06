@@ -491,9 +491,18 @@ class FIMParser(FIMHeaderMixin):
         # definitions
         defs = {}
 
+        # required attributes
+        required = []
+
         # add root properties and update fill definitions
         for fim_structure in self.form:
             json_schema["properties"][fim_structure.id], defs = fim_structure.to_json(defs)
+
+            if fim_structure.is_required:
+                required.append(fim_structure.contains.id)
+
+        if len(required) > 0:
+            json_schema["required"] = required
 
         json_schema['$defs'] = defs
 
