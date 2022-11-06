@@ -142,7 +142,7 @@ class FIMStructure(FIMElement):
             raise FIMParserError("FIMStructure contains unrecognised element")
 
     def __str__(self):
-        return f"{str(self.contains)} - ({self.min_items}:{self.max_items})"
+        return f"{str(self.contains)} ({self.min_items}:{self.max_items})"
 
     @property
     def min_items(self) -> int:
@@ -336,7 +336,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
             }
 
     def __str__(self):
-        return f'{self.name}[{self.field_type}, {self.data_type}, {self._reference_value_uri}]'
+        return f'FIMField[name = {self.name}, field_type = {self.field_type}, data_type = {self.data_type}, reference_value_uri = {self._reference_value_uri}]'
 
 
 class FIMFieldGroup(FIMElement, FIMHeaderMixin):
@@ -377,7 +377,8 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
         return base, defs
 
     def __str__(self):
-        return f'{self.name} [{", ".join([str(e) for e in self.fields])}]'
+        newline = '\n'
+        return f'FIMGroup[name = {self.name}, fields = [\n- {(newline+"- ").join([str(e) for e in self.fields])}\n]]'
 
 
 class FIMParser(FIMHeaderMixin):
