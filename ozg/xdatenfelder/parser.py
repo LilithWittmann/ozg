@@ -293,7 +293,8 @@ class FIMField(FIMElement, FIMHeaderMixin):
         if self.field_type == "input":
             a = mapping[self.data_type]
             a["title"] = self.input_name if self.input_name else self.name
-            a["description"] = self._input_hint if self._input_hint else None
+            if self._input_hint:
+                a["description"] = self._input_hint
 
             if self._default_value:
                 a["default"] = self.default_value
@@ -315,12 +316,17 @@ class FIMField(FIMElement, FIMHeaderMixin):
             any_of = []
             for choice in fim_code_list.dataset:
                 any_of.append(choice[1])
-            return {
+
+            schema = {
                 "title": self.input_name if self.input_name else self.name,
-                "description": self._input_hint if self._input_hint else None,
+                "type": "string",
                 "enum": any_of,
-                "type": "string"
             }
+
+            if self._input_hint:
+                schema["description"] = self._input_hint
+
+            return schema
         elif self.field_type == "label":
             return {
                 "title": self.input_name if self.input_name else self.name,
@@ -329,11 +335,15 @@ class FIMField(FIMElement, FIMHeaderMixin):
                 "x-display": "label"
             }
         else:
-            return {
+            schema = {
                 "title": self.input_name if self.input_name else self.name,
-                "description": self._input_hint if self._input_hint else None,
                 "type": "string"
             }
+
+            if self._input_hint:
+                schema["description"] = self._input_hint
+
+            return schema
 
     def __str__(self):
         return f'FIMField[name = {self.name}, field_type = {self.field_type}, data_type = {self.data_type}, reference_value_uri = {self._reference_value_uri}]'
@@ -360,19 +370,24 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
         """
         base = {
             "title": self.name,
-            "description": self.description,
             "type": "object",
             "properties": {},
-            "required": []
-
         }
+
+        required = []
+
+        if self.description:
+            base["description"] = self.description
 
         last_element = None
         for fim_structure in self.fields:
             base["properties"][fim_structure.contains.id], defs = fim_structure.to_json(defs)
 
             if fim_structure.is_required:
-                base["required"].append(fim_structure.contains.id)
+                required.append(fim_structure.contains.id)
+
+        if len(required) > 0:
+            base["required"] = required
 
         return base, defs
 
@@ -476,9 +491,18 @@ class FIMParser(FIMHeaderMixin):
         # definitions
         defs = {}
 
+        # required attributes
+        required = []
+
         # add root properties and update fill definitions
         for fim_structure in self.form:
             json_schema["properties"][fim_structure.id], defs = fim_structure.to_json(defs)
+
+            if fim_structure.is_required:
+                required.append(fim_structure.contains.id)
+
+        if len(required) > 0:
+            json_schema["required"] = required
 
         json_schema['$defs'] = defs
 
