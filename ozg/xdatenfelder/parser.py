@@ -431,7 +431,6 @@ class FIMParser(FIMHeaderMixin):
         :return:
         """
         self._form = []
-        print()
         if len(self.parsed_xml.children[0].get_elements("xdf_stammdatenschema")) > 0:
             for element in self.parsed_xml.children[0].xdf_stammdatenschema.xdf_struktur:
                 self.form.append(FIMStructure(element, self))
