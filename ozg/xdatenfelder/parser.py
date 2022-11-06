@@ -372,8 +372,9 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
             "title": self.name,
             "type": "object",
             "properties": {},
-            "required": []
         }
+
+        required = []
 
         if self.description:
             base["description"] = self.description
@@ -383,7 +384,10 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
             base["properties"][fim_structure.contains.id], defs = fim_structure.to_json(defs)
 
             if fim_structure.is_required:
-                base["required"].append(fim_structure.contains.id)
+                required.append(fim_structure.contains.id)
+
+        if len(required) > 0:
+            base["required"] = required
 
         return base, defs
 
