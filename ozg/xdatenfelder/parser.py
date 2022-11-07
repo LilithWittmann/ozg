@@ -306,6 +306,10 @@ class FIMField(FIMElement, FIMHeaderMixin):
                         a["minLength"] = int(validation["minLength"])
                     if "maxLength" in validation:
                         a["maxLength"] = int(validation["maxLength"])
+                    if "minValue" in validation:
+                        a["minimum"] = int(validation["minValue"])
+                    if "maxValue" in validation:
+                        a["maximum"] = int(validation["maxValue"])
                     if "pattern" in validation:
                         a["pattern"] = validation["pattern"]
                 except ValueError:
