@@ -329,9 +329,13 @@ class FIMField(FIMElement, FIMHeaderMixin):
                 schema["type"] = "string"
 
                 fim_code_list = FimCodeList(self._reference_value_uri)
-                schema["enum"] = []
+                schema["oneOf"] = []
                 for choice in fim_code_list.dataset:
-                    schema["enum"].append(choice[1])
+                    schema["oneOf"].append({
+                        "type": "string",
+                        "title": choice[1],
+                        "const": choice[0]
+                    })
             else:
                 raise NotImplementedError(f"no implementation for fields of type {self.field_type}, data type {self.data_type} and no codelist urn")
 
