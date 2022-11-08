@@ -306,6 +306,10 @@ class FIMField(FIMElement, FIMHeaderMixin):
                         a["minLength"] = int(validation["minLength"])
                     if "maxLength" in validation:
                         a["maxLength"] = int(validation["maxLength"])
+                    if "minValue" in validation:
+                        a["minimum"] = int(validation["minValue"])
+                    if "maxValue" in validation:
+                        a["maximum"] = int(validation["maxValue"])
                     if "pattern" in validation:
                         a["pattern"] = validation["pattern"]
                 except ValueError:
@@ -450,7 +454,7 @@ class FIMParser(FIMHeaderMixin):
             for element in self.parsed_xml.children[0].xdf_stammdatenschema.xdf_struktur:
                 self.form.append(FIMStructure(element, self))
         else:
-            self.form.append(FIMFieldGroup( self.parsed_xml.children[0].xdf_datenfeldgruppe, self))
+            self.form.append(FIMFieldGroup(self.parsed_xml.children[0].xdf_datenfeldgruppe, self))
 
     @property
     def xml(self) -> str:
@@ -498,7 +502,11 @@ class FIMParser(FIMHeaderMixin):
         for fim_structure in self.form:
             json_schema["properties"][fim_structure.id], defs = fim_structure.to_json(defs)
 
-            if fim_structure.is_required:
+            # if the root property is a FIMFieldGroup, then the whole object is a xdatenfelder.datenfeldgruppe
+            if isinstance(fim_structure, FIMFieldGroup):
+                required.append(fim_structure.id)
+
+            if isinstance(fim_structure, FIMStructure) and fim_structure.is_required:
                 required.append(fim_structure.contains.id)
 
         if len(required) > 0:

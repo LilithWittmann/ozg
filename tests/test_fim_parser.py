@@ -55,7 +55,7 @@ class TestFimParserInit:
         print(parser.to_json)
 
     def test_from_url(self):
-        parser = FIMParser("https://fimportal.de/detail?tx_fimportalcatalog_fimsearch%5Baction%5D=download&tx_fimportalcatalog_fimsearch%5Bcontroller%5D=CatalogEntry&tx_fimportalcatalog_fimsearch%5BdocumentIndex%5D=1&tx_fimportalcatalog_fimsearch%5Bid%5D=DS00000123&cHash=0760c920aa906ab17ecef77281781f09")
+        parser = FIMParser("https://raw.githubusercontent.com/LilithWittmann/ozg/master/tests/fixtures/BlaueKarte.xml")
         print(parser.to_json)
 
 
