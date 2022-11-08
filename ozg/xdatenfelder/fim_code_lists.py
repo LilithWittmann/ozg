@@ -18,9 +18,9 @@ class FimCodeList(object):
             self._dataset = []
             latest_uri = self.version_xml.dat_VersionCodeliste.dat_kennung.cdata
             # download the codelist and parse (currently always the second value) as a list of enums
-            result = requests.get(f"https://www.xrepository.de/api/version_codeliste/{latest_uri}/genericode-daten")
+            result = requests.get(f"https://www.xrepository.de/api/version_codeliste/{latest_uri}/json")
             for item in result.json()["daten"]:
-                self._dataset.append((item["zelle"][0]["wert"], item["zelle"][1]["wert"]))
+                self._dataset.append((item[0], item[1]))
         except Exception as e:
             print(f"https://www.xrepository.de/api/codeliste/{urn}/gueltigeVersion")
             print(f"unable to find {urn} in xrepository")
