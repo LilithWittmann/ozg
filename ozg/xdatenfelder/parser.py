@@ -316,19 +316,24 @@ class FIMField(FIMElement, FIMHeaderMixin):
                     pass
             return a
         elif self.field_type == "select":
-            fim_code_list = FimCodeList(self._reference_value_uri)
-            any_of = []
-            for choice in fim_code_list.dataset:
-                any_of.append(choice[1])
-
             schema = {
                 "title": self.input_name if self.input_name else self.name,
-                "type": "string",
-                "enum": any_of,
             }
 
             if self._input_hint:
                 schema["description"] = self._input_hint
+
+            if self.data_type == 'bool':
+                schema["type"] = "string"
+            elif self.data_type == 'text' and self._reference_value_uri:
+                schema["type"] = "string"
+
+                fim_code_list = FimCodeList(self._reference_value_uri)
+                schema["enum"] = []
+                for choice in fim_code_list.dataset:
+                    schema["enum"].append(choice[1])
+            else:
+                raise NotImplementedError(f"no implementation for fields of type {self.field_type}, data type {self.data_type} and no codelist urn")
 
             return schema
         elif self.field_type == "label":
