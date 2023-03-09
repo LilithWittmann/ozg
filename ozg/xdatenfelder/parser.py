@@ -209,13 +209,17 @@ class FIMStructure(FIMElement):
 
         if level == 0:
             element = {
-                "title": self.contains.input_name,
-                "description": self.contains.description,
                 "type": "object",
                 "properties": {
                     self.id: element
                 }
             }
+
+            if self.contains.input_name:
+                element['title'] = self.contains.input_name
+
+            if self.contains.description:
+                element['description'] = self.contains.description,
 
         return element, defs
 
@@ -231,15 +235,16 @@ class FIMField(FIMElement, FIMHeaderMixin):
         self._input_hint = self.set_none_if_empty(self._definition.xdf_hilfetextEingabe.cdata)
         self._output_hint = self.set_none_if_empty(self._definition.xdf_hilfetextAusgabe.cdata)
 
-        self._reference_value_uri = None
+        self._codelist_reference_uri = None
+        self._codelist_reference_id = None
         if self._field_type == "select":
             if self._version == FIMParser.FIM_VERSION_1:
                 if len(self._definition.get_elements("xdf_codeliste")) == 1:
-                    self._reference_value_uri = self._definition.xdf_codeliste.xdf_kennung.cdata
+                    self._codelist_reference_uri = self._definition.xdf_codeliste.xdf_kennung.cdata
             elif self._version == FIMParser.FIM_VERSION_2:
                 if len(self._definition.get_elements("xdf_codelisteReferenz")) == 1:
-                    self._reference_value_uri = self._definition.xdf_codelisteReferenz.xdf_genericodeIdentification.xdf_canonicalIdentification.cdata
-                    print(self._reference_value_uri)
+                    self._codelist_reference_id = self._definition.xdf_codelisteReferenz.xdf_identifikation.xdf_id.cdata
+                    self._codelist_reference_uri = self._definition.xdf_codelisteReferenz.xdf_genericodeIdentification.xdf_canonicalIdentification.cdata
 
     ELEMENT_TYPE = "field"
 
@@ -325,18 +330,28 @@ class FIMField(FIMElement, FIMHeaderMixin):
 
             if self.data_type == 'bool':
                 schema["type"] = "string"
-            elif self.data_type == 'text' and self._reference_value_uri:
+            elif self.data_type == 'text' and self._codelist_reference_id:
                 schema["type"] = "string"
 
-                fim_code_list = FimCodeList(self._reference_value_uri)
+                if self._codelist_reference_id in self._fim_parser._additional_codelists:
+                    fim_codelist = FimCodeList(file_name = self._fim_parser._additional_codelists[self._codelist_reference_id])
+                elif self._codelist_reference_uri:
+                    fim_codelist = FimCodeList(urn = self._codelist_reference_uri)
+                else:
+                    raise ValueError(f"Codelist with FIM-ID {self._codelist_reference_id} must be included in additional_codelists parameter")
+
                 schema["oneOf"] = []
-                for choice in fim_code_list.dataset:
+                for choice in fim_codelist.dataset:
                     schema["oneOf"].append({
                         "type": "string",
                         "title": choice[1],
                         "const": choice[0]
                     })
+            elif self.data_type == 'num_currency':
+                schema["type"] = "number"
+                schema["multipleOf"] = 0.01
             else:
+                print(self)
                 raise NotImplementedError(f"no implementation for fields of type {self.field_type}, data type {self.data_type} and no codelist urn")
 
             return schema
@@ -359,7 +374,7 @@ class FIMField(FIMElement, FIMHeaderMixin):
             return schema
 
     def __str__(self):
-        return f'FIMField[name = {self.name}, field_type = {self.field_type}, data_type = {self.data_type}, reference_value_uri = {self._reference_value_uri}]'
+        return f'FIMField[name = {self.name}, field_type = {self.field_type}, data_type = {self.data_type}, reference_value_uri = {self._codelist_reference_uri}]'
 
 
 class FIMFieldGroup(FIMElement, FIMHeaderMixin):
@@ -368,7 +383,7 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
 
         self._fields = []
         for element in self._definition.xdf_struktur:
-            self._fields.append(FIMStructure(element, self))
+            self._fields.append(FIMStructure(element, self._fim_parser))
 
     @property
     def fields(self):
@@ -382,15 +397,17 @@ class FIMFieldGroup(FIMElement, FIMHeaderMixin):
         :return: a json-schema object
         """
         base = {
-            "title": self.name,
             "type": "object",
             "properties": {},
         }
 
-        required = []
+        if self.name:
+            base["title"] = self.name
 
         if self.description:
             base["description"] = self.description
+
+        required = []
 
         last_element = None
         for fim_structure in self.fields:
@@ -418,15 +435,22 @@ class FIMParser(FIMHeaderMixin):
         "urn:xoev-de:fim:standard:xdatenfelder_2": FIM_VERSION_2,
     }
 
-    def __init__(self, fim_xml: str, override_version_check: str = None, no_parsing: bool = False):
+    def __init__(self, fim_xml: str, additional_codelists: dict[str] = {}, override_version_check: str = None, no_parsing: bool = False):
         """
         init a new FIMParser
         :param fim_xml: xml of the fim file you want to parse as a string, a url or a filename
+        :param additional_codelists: additional codelists that cannot be auto-retrieved from XRepository, a dict with FIM-IDs as keys and urls or filenames (that point to genericode files) as values
         :param override_version_check: override the fim version manually (see SUPPORTED_FIM_VERSIONS for options)
         :param no_parsing: used for tests
         """
         self._xml = fim_xml
         self._parsed_xml = untangle.parse(fim_xml)
+
+        self._additional_codelists = additional_codelists
+        self._parsed_additional_codelists = {}
+        for fim_id in self._additional_codelists:
+            self._parsed_additional_codelists[fim_id] = untangle.parse(self._additional_codelists[fim_id])
+
         if not override_version_check:
             self._check_fim_version()
         else:
@@ -494,12 +518,16 @@ class FIMParser(FIMHeaderMixin):
         # create json schema skeleton
         json_schema = {
             "$schema": "https://json-schema.org/draft/2020-12/schema",
-            "title": self.input_name,
-            "description": self.description,
             "type": "object",
             "properties": {},
             "x-display": "expansion-panels"
         }
+
+        if self.input_name:
+            json_schema['title'] = self.input_name
+
+        if self.description:
+            json_schema['description'] = self.description
 
         # definitions
         defs = {}
