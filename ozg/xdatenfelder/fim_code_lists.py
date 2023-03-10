@@ -45,8 +45,12 @@ class FimCodeList(object):
         print(f"Parsing codelist from file: {file_name}...")
         self._parsed_xml = untangle.parse(file_name)
         self._dataset = []
+        if len(self._parsed_xml.CodeList.SimpleCodeList.children) == 0:
+            raise ValueError(f"codelist from file is empty: {file_name}")
+
         if not self._parsed_xml.CodeList.SimpleCodeList.Row:
             raise ValueError(f"cannot parse codelist from file: {file_name}")
+
         for row in self._parsed_xml.CodeList.SimpleCodeList.Row:
             self._dataset.append((row.Value[0].SimpleValue.cdata, row.Value[1].SimpleValue.cdata))
 
